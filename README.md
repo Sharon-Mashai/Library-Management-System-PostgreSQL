@@ -183,3 +183,46 @@ SELECT * FROM patrons;
 ```
 
 Each table should contain **10 records**.
+
+# Sprint 3: Read Operations
+
+Sprint 3 uses `SELECT` queries to retrieve information from the database.
+
+## Get All Books
+
+```sql
+SELECT * FROM books;
+```
+
+Returns all books stored in the `books` table.
+
+## Get a Book by Title
+
+```sql
+SELECT *
+FROM books
+WHERE title = '1984';
+```
+
+`WHERE` filters the records and returns the book with the specified title.
+
+## Get Books by a Specific Author
+
+```sql
+SELECT books.*
+FROM books
+JOIN authors ON books.author_id = authors.id
+WHERE authors.name = 'George Orwell';
+```
+
+`JOIN` connects `books.author_id` to `authors.id`, allowing books to be searched using the author's name.
+
+## Get Available Books
+
+```sql
+SELECT *
+FROM books
+WHERE available = TRUE;
+```
+
+Returns books that are currently available.
