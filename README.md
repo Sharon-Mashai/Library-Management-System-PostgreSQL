@@ -268,3 +268,37 @@ SELECT id, title, available FROM books WHERE id = 10;
 SELECT id, title, genres FROM books WHERE id = 1;
 SELECT id, name, borrowed_books FROM patrons WHERE id = 1;
 ```
+
+# Sprint 5: Delete Operations
+
+Sprint 5 uses `DELETE` to remove records from the database.
+
+## Delete a Book by Title
+
+```sql
+DELETE FROM books
+WHERE title = 'The Great Gatsby';
+```
+
+Deletes *The Great Gatsby* from the `books` table.
+
+## Delete an Author by ID
+
+```sql
+DELETE FROM authors
+WHERE id = 3;
+```
+
+Deletes the author with ID `3`. The related book is deleted first because `books.author_id` references the `authors` table.
+
+## Verify Deletions
+
+```sql
+SELECT * FROM books
+WHERE title = 'The Great Gatsby';
+
+SELECT * FROM authors
+WHERE id = 3;
+```
+
+Both queries should return **0 rows**.
