@@ -226,3 +226,45 @@ WHERE available = TRUE;
 ```
 
 Returns books that are currently available.
+
+# Sprint 4: Update Operations
+
+Sprint 4 uses `UPDATE` to modify existing records.
+
+## Mark a Book as Borrowed
+
+```sql
+UPDATE books
+SET available = FALSE
+WHERE id = 10;
+```
+
+Sets *The Hobbit* as unavailable.
+
+## Add a Genre
+
+```sql
+UPDATE books
+SET genres = array_append(genres, 'Classic')
+WHERE id = 1;
+```
+
+`array_append()` adds `Classic` to the existing genres of *1984*.
+
+## Update a Patron's Borrowed Books
+
+```sql
+UPDATE patrons
+SET borrowed_books = array_append(borrowed_books, 10)
+WHERE id = 1;
+```
+
+Adds book ID `10` to Alice Johnson's borrowed books.
+
+## Verify Updates
+
+```sql
+SELECT id, title, available FROM books WHERE id = 10;
+SELECT id, title, genres FROM books WHERE id = 1;
+SELECT id, name, borrowed_books FROM patrons WHERE id = 1;
+```
