@@ -302,3 +302,63 @@ WHERE id = 3;
 ```
 
 Both queries should return **0 rows**.
+
+# Sprint 6: Advanced Queries
+
+Sprint 6 uses filtering, searching, multiple conditions, and bulk updates.
+
+## Books Published After 1950
+
+```sql
+SELECT *
+FROM books
+WHERE published_year > 1950;
+```
+
+## American Authors
+
+```sql
+SELECT *
+FROM authors
+WHERE nationality = 'American';
+```
+
+## Set All Books as Available
+
+```sql
+UPDATE books
+SET available = TRUE;
+```
+
+No `WHERE` clause is used because all books must be updated.
+
+## Available Books Published After 1950
+
+```sql
+SELECT *
+FROM books
+WHERE available = TRUE
+AND published_year > 1950;
+```
+
+`AND` requires both conditions to be true.
+
+## Authors Containing "George"
+
+```sql
+SELECT *
+FROM authors
+WHERE name LIKE '%George%';
+```
+
+`LIKE` and `%` are used to search for names containing `George`.
+
+## Increment Published Year
+
+```sql
+UPDATE books
+SET published_year = published_year + 1
+WHERE published_year = 1869;
+```
+
+Changes the published year from `1869` to `1870`.
