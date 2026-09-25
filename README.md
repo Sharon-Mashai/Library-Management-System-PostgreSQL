@@ -117,7 +117,9 @@ authors
 books
 patrons
 ```
+### Result
 
+![Sprint 1 ](screenshots/Sprint1.png)
 ---
 # Sprint 2: Insert Data
 
@@ -184,6 +186,11 @@ SELECT * FROM patrons;
 
 Each table should contain **10 records**.
 
+### Result
+
+![Sprint 2 ](screenshots/sprint2.png)
+--- 
+
 # Sprint 3: Read Operations
 
 Sprint 3 uses `SELECT` queries to retrieve information from the database.
@@ -227,6 +234,11 @@ WHERE available = TRUE;
 
 Returns books that are currently available.
 
+### Result
+
+![Sprint 3 ](screenshots/sprint3.png)
+---
+
 # Sprint 4: Update Operations
 
 Sprint 4 uses `UPDATE` to modify existing records.
@@ -268,7 +280,10 @@ SELECT id, title, available FROM books WHERE id = 10;
 SELECT id, title, genres FROM books WHERE id = 1;
 SELECT id, name, borrowed_books FROM patrons WHERE id = 1;
 ```
+### Result
 
+![Sprint 4 ](screenshots/sprint4.png)
+---
 # Sprint 5: Delete Operations
 
 Sprint 5 uses `DELETE` to remove records from the database.
@@ -302,6 +317,10 @@ WHERE id = 3;
 ```
 
 Both queries should return **0 rows**.
+### Result
+
+![Sprint 5 ](screenshots/sprint5.png)
+---
 
 # Sprint 6: Advanced Queries
 
@@ -362,3 +381,7 @@ WHERE published_year = 1869;
 ```
 
 Changes the published year from `1869` to `1870`.
+
+### Result
+
+![Sprint 6 ](screenshots/sprint6.png)
