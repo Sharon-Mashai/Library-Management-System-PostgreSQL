@@ -384,3 +384,10 @@ Changes the published year from `1869` to `1870`.
 
 ### Result
 ![Sprint 6 ](screenshots/sprint6.png)
+---
+
+# Author
+
+**Sharon Mashai**
+
+* GitHub: [Sharon-Mashai](https://github.com/Sharon-Mashai)
